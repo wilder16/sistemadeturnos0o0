@@ -4,7 +4,7 @@ import com.clinicaodontologica.sistemadeturnos.dto.PacienteDto;
 
 import java.util.Collection;
 
-public interface PacienteService {
+public interface IPacienteService {
 
 
      PacienteDto agregarPaciente(PacienteDto paciente);

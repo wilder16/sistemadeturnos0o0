@@ -1,0 +1,45 @@
+[2022-09-24 12:40:57] [ INFO ] [OdontologoServiceImpl:28] Transformando el OdontologoDto a OdontologoEntity para el guardado
+[2022-09-24 12:40:57] [ INFO ] [OdontologoServiceImpl:30] Se guardo correctamente el odontologo
+[2022-09-24 12:46:58] [ INFO ] [OdontologoServiceImpl:28] Transformando el OdontologoDto a OdontologoEntity para el guardado
+[2022-09-24 12:46:58] [ INFO ] [OdontologoServiceImpl:30] Se guardo correctamente el odontologo
+[2022-09-24 12:48:34] [ INFO ] [OdontologoServiceImpl:29] Se guardo correctamente el odontologo con matricula ABC123112
+[2022-09-24 13:04:41] [ INFO ] [OdontologoServiceImpl:30] Se guardo correctamente el odontologo con matricula ABC123
+[2022-09-24 13:04:41] [ INFO ] [OdontologoServiceImpl:33] Ya existe un odontologo con matricula ABC123
+[2022-09-24 13:04:49] [ INFO ] [OdontologoServiceImpl:33] Ya existe un odontologo con matricula ABC123
+[2022-09-24 13:04:49] [ INFO ] [OdontologoServiceImpl:33] Ya existe un odontologo con matricula ABC123
+[2022-09-24 13:09:30] [ INFO ] [OdontologoServiceImpl:30] Se guardo correctamente el odontologo con matricula ABC123
+[2022-09-24 13:09:30] [ INFO ] [OdontologoServiceImpl:33] Ya existe un odontologo con matricula ABC123
+[2022-09-24 13:10:51] [ INFO ] [OdontologoServiceImpl:30] Se guardo correctamente el odontologo con matricula ABC123
+[2022-09-24 13:10:51] [ INFO ] [OdontologoServiceImpl:33] Ya existe un odontologo con matricula ABC123
+[2022-09-24 13:11:31] [ INFO ] [OdontologoServiceImpl:30] Se guardo correctamente el odontologo con matricula ABC1231
+[2022-09-24 13:11:31] [ INFO ] [OdontologoServiceImpl:33] Ya existe un odontologo con matricula ABC1231
+[2022-09-24 13:14:49] [ INFO ] [OdontologoServiceImpl:30] Se guardo correctamente el odontologo con matricula ABC31
+[2022-09-24 13:14:49] [ INFO ] [OdontologoServiceImpl:33] Ya existe un odontologo con matricula ABC31
+[2022-09-24 14:10:52] [ INFO ] [OdontologoServiceImpl:30] Se guardo correctamente el odontologo con matricula ABC123
+[2022-09-24 14:10:52] [ ERROR] [GlobalExceptionHandler:18] could not execute statement; SQL [n/a]; constraint ["PUBLIC.UK_CP8J4TUUOSAGMNGJVGKCIF8G3_INDEX_D ON PUBLIC.ODONTOLOGO_ENTITY(MATRICULA NULLS FIRST) VALUES ( /* 1 */ 'ABC123' )"; SQL statement:
+insert into odontologo_entity (apellido, matricula, nombre, id) values (?, ?, ?, ?) [23505-214]]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+[2022-09-24 14:14:50] [ INFO ] [OdontologoServiceImpl:29] Se guardo correctamente el odontologo con matricula ABC123
+[2022-09-24 14:14:56] [ ERROR] [GlobalExceptionHandler:18] could not execute statement; SQL [n/a]; constraint ["PUBLIC.UK_CP8J4TUUOSAGMNGJVGKCIF8G3_INDEX_D ON PUBLIC.ODONTOLOGO_ENTITY(MATRICULA NULLS FIRST) VALUES ( /* 1 */ 'ABC123' )"; SQL statement:
+insert into odontologo_entity (apellido, matricula, nombre, id) values (?, ?, ?, ?) [23505-214]]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+[2022-09-24 14:15:19] [ INFO ] [OdontologoServiceImpl:29] Se guardo correctamente el odontologo con matricula ABC1213
+[2022-09-24 14:15:22] [ ERROR] [GlobalExceptionHandler:18] could not execute statement; SQL [n/a]; constraint ["PUBLIC.UK_CP8J4TUUOSAGMNGJVGKCIF8G3_INDEX_D ON PUBLIC.ODONTOLOGO_ENTITY(MATRICULA NULLS FIRST) VALUES ( /* 3 */ 'ABC1213' )"; SQL statement:
+insert into odontologo_entity (apellido, matricula, nombre, id) values (?, ?, ?, ?) [23505-214]]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
+[2022-09-24 16:45:37] [ INFO ] [OdontologoServiceImpl:32] Se guardo correctamente el odontologo con matricula ABC1213
+[2022-09-24 16:45:43] [ ERROR] [GlobalExceptionHandler:17] Invocation failure
+Controller [com.clinicaodontologica.sistemadeturnos.controller.OdontologoController]
+Method [public org.springframework.http.ResponseEntity<com.clinicaodontologica.sistemadeturnos.dto.OdontologoDto> com.clinicaodontologica.sistemadeturnos.controller.OdontologoController.guargarOdontologo(com.clinicaodontologica.sistemadeturnos.dto.OdontologoDto) throws com.clinicaodontologica.sistemadeturnos.exception.GlobalExceptionHandler] with argument values:
+ [0] [type=com.clinicaodontologica.sistemadeturnos.dto.OdontologoDto] [value=OdontologoDto(nombre=Isai, apellido=Bermal, matricula=ABC1213)] 
+[2022-09-24 17:21:43] [ INFO ] [OdontologoServiceImpl:32] Se guardo correctamente el odontologo con matricula ABC123
+[2022-09-24 17:21:50] [ ERROR] [GlobalExceptionHandler:17] Ya existe un odontologo con la matricula ABC123
+[2022-09-24 17:25:58] [ INFO ] [OdontologoServiceImpl:32] Se guardo correctamente el odontologo con matricula ABC123
+[2022-09-24 17:26:01] [ ERROR] [GlobalExceptionHandler:17] Ya existe un odontologo con la matricula ABC123
+[2022-09-24 18:24:16] [ ERROR] [GlobalExceptionHandler:24] No exite un odontologo con el id: 1
+[2022-09-24 18:25:14] [ INFO ] [OdontologoServiceImpl:34] Se guardo correctamente el odontologo con matricula ABC123
+[2022-09-24 18:49:49] [ INFO ] [OdontologoServiceImpl:33] Se guardo correctamente el odontologo con matricula ABC123
+[2022-09-24 18:50:08] [ INFO ] [OdontologoServiceImpl:33] Se guardo correctamente el odontologo con matricula ABC12312
+[2022-09-24 19:14:24] [ INFO ] [OdontologoServiceImpl:33] Se guardo correctamente el odontologo con matricula ABC123
+[2022-09-24 19:14:29] [ INFO ] [OdontologoServiceImpl:44] Consultando el odontologo con el id 1
+[2022-09-24 19:17:04] [ INFO ] [OdontologoServiceImpl:44] Consultando el odontologo con el id 1
+[2022-09-24 19:27:57] [ INFO ] [OdontologoServiceImpl:33] Se guardo correctamente el odontologo con matricula ABC123
+[2022-09-24 19:28:21] [ ERROR] [GlobalExceptionHandler:17] Ya existe un odontologo con la matricula ABC123
+[2022-09-24 19:28:38] [ INFO ] [OdontologoServiceImpl:33] Se guardo correctamente el odontologo con matricula 12345A

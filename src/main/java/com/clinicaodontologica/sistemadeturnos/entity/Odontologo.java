@@ -9,7 +9,7 @@ import java.util.Set;
 
 @Entity
 @Data
-public class OdontologoEntity {
+public class Odontologo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)

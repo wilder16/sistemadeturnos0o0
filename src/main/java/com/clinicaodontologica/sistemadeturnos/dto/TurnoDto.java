@@ -1,2 +1,4 @@
-package com.clinicaodontologica.sistemadeturnos.dto;public class TurnoDto {
+package com.clinicaodontologica.sistemadeturnos.dto;
+
+public class TurnoDto {
 }
