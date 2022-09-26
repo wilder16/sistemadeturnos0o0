@@ -9,7 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
-import java.util.Optional;
+
 
 @RestController
 @RequestMapping("/odontologos")
@@ -29,7 +29,7 @@ public class OdontologoController {
 
     @GetMapping("{id}")
     public ResponseEntity<OdontologoDto> buscarOdontologoPorId(@PathVariable Long id) throws ResourceNotFoundException {
-        return new ResponseEntity<>(odontologoService.obtenerOdontologoPorId(id), HttpStatus.OK);
+        return new ResponseEntity(odontologoService.obtenerOdontologoPorId(id), HttpStatus.OK);
     }
 
     @GetMapping("listar")
@@ -38,7 +38,12 @@ public class OdontologoController {
     }
 
     @PatchMapping
-    public OdontologoDto modificarOdontologo(@RequestBody OdontologoDto odontologo){
+    public OdontologoDto modificarOdontologo(@RequestBody OdontologoDto odontologo) throws ResourceNotFoundException {
         return odontologoService.modificarOdontologo(odontologo);
+    }
+
+    @DeleteMapping("{id}")
+    public ResponseEntity<OdontologoDto> elimianarOdontologo(@PathVariable Long id) throws ResourceNotFoundException {
+        return new ResponseEntity(odontologoService.eliminarOdontologoPorId(id), HttpStatus.OK);
     }
 }

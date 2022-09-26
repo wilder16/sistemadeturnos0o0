@@ -47,7 +47,6 @@ public class OdontologoServiceImpl implements IOdontologoService {
         else{
             throw new ResourceNotFoundException("No existe un odontologo con el id: " + id);
         }
-
     }
 
     @Override
@@ -60,14 +59,30 @@ public class OdontologoServiceImpl implements IOdontologoService {
     }
 
     @Override
-    public OdontologoDto modificarOdontologo(OdontologoDto odontologo) {
-        Odontologo odontologoModificar =  mapper.convertValue(odontologo, Odontologo.class);
-        odontologoRepository.save(odontologoModificar);
-        return odontologo;
+    public OdontologoDto modificarOdontologo(OdontologoDto odontologo) throws ResourceNotFoundException {
+        Optional<Odontologo> odontologoModificar = odontologoRepository.findByMatricula(odontologo.getMatricula()).map(odontologo1 ->{
+            odontologo1.setNombre(odontologo.getNombre());
+            odontologo1.setNombre(odontologo.getApellido());
+            return odontologoRepository.save(odontologo1);
+        });
+        if(odontologoModificar.isPresent()){
+            return odontologo;
+        }
+        else{
+            throw new ResourceNotFoundException("No existe un odontologo con la matricula: " + odontologo.getMatricula());
+        }
     }
 
     @Override
-    public OdontologoDto eliminarOdontologoPorId(Long id) {
-        return null;
+    public OdontologoDto eliminarOdontologoPorId(Long id) throws ResourceNotFoundException {
+        Optional<Odontologo>  odontologo = odontologoRepository.findById(id);
+        if(odontologo.isPresent()){
+            LOGGER.info("Eliminando el odontologo con el id " + id);
+            odontologoRepository.deleteById(id);
+            return mapper.convertValue(odontologo, OdontologoDto.class);
+        }
+        else{
+            throw new ResourceNotFoundException("No existe un odontologo con el id: " + id);
+        }
     }
 }
