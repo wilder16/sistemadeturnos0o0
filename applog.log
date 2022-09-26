@@ -53,3 +53,9 @@ Method [public org.springframework.http.ResponseEntity<com.clinicaodontologica.s
 [2022-09-26 01:49:41] [ INFO ] [OdontologoServiceImpl:44] Consultando el odontologo con el id 1
 [2022-09-26 02:10:44] [ INFO ] [OdontologoServiceImpl:33] Se guardo correctamente el odontologo con matricula 12345A
 [2022-09-26 02:11:19] [ ERROR] [GlobalExceptionHandler:24] No existe un odontologo con el matricula: 12345A8
+[2022-09-26 13:26:37] [ ERROR] [GlobalExceptionHandler:17] Ya existe un paciente con el dni 78108532
+[2022-09-26 13:27:56] [ INFO ] [OdontologoServiceImpl:33] Se guardo correctamente el odontologo con matricula 12345A
+[2022-09-26 13:29:19] [ ERROR] [GlobalExceptionHandler:17] Ya existe un paciente con el dni 78108532
+[2022-09-26 13:37:24] [ ERROR] [GlobalExceptionHandler:17] Ya existe un paciente con el dni 78108532
+[2022-09-26 13:37:51] [ INFO ] [OdontologoServiceImpl:33] Se guardo correctamente el odontologo con matricula 12345A
+[2022-09-26 13:54:20] [ ERROR] [GlobalExceptionHandler:17] Ya existe un paciente con el dni 78108532
