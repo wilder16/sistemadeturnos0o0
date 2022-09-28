@@ -6,6 +6,7 @@ import com.clinicaodontologica.sistemadeturnos.exception.DuplicateResourceExcept
 import com.clinicaodontologica.sistemadeturnos.exception.ResourceNotFoundException;
 import com.clinicaodontologica.sistemadeturnos.repository.IOdontologoRepository;
 import com.clinicaodontologica.sistemadeturnos.service.IOdontologoService;
+import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Service;
@@ -28,13 +29,14 @@ public class OdontologoServiceImpl implements IOdontologoService {
 
     @Override
     public OdontologoDto agregarOdontologo(OdontologoDto odontologo) throws DuplicateResourceException {
-        try {
-            odontologoRepository.save( mapper.convertValue(odontologo, Odontologo.class));
-            LOGGER.info("Se guardo correctamente el odontologo con matricula " + odontologo.getMatricula());
-            return odontologo;
-        }catch (Exception e){
-            throw new DuplicateResourceException("Ya existe un odontologo con la matricula " + odontologo.getMatricula());
-        }
+            Optional<Odontologo> odontologoConsultado = odontologoRepository.findByMatricula(odontologo.getMatricula());
+            if (!odontologoConsultado.isPresent()){
+                odontologoRepository.save( mapper.convertValue(odontologo, Odontologo.class));
+                LOGGER.info("Se guardo correctamente el odontologo con matricula " + odontologo.getMatricula());
+                return odontologo;
+            }else {
+                throw new DuplicateResourceException("Ya existe un odontologo con la matricula " + odontologo.getMatricula());
+            }
     }
 
     @Override
@@ -55,21 +57,24 @@ public class OdontologoServiceImpl implements IOdontologoService {
         Set<OdontologoDto> odontologosDto = new HashSet<>();
         for(Odontologo odontologo: odontologos)
             odontologosDto.add(mapper.convertValue(odontologo, OdontologoDto.class));
+        LOGGER.info("Listando todos los odontologos");
         return odontologosDto;
     }
 
     @Override
-    public OdontologoDto modificarOdontologo(OdontologoDto odontologo) throws ResourceNotFoundException {
-        Optional<Odontologo> odontologoModificar = odontologoRepository.findByMatricula(odontologo.getMatricula()).map(odontologo1 ->{
-            odontologo1.setNombre(odontologo.getNombre());
-            odontologo1.setNombre(odontologo.getApellido());
-            return odontologoRepository.save(odontologo1);
-        });
+    public OdontologoDto modificarOdontologo(OdontologoDto odontologoDto) throws ResourceNotFoundException {
+        Optional<Odontologo> odontologoModificar = odontologoRepository.findByMatricula(odontologoDto.getMatricula());
         if(odontologoModificar.isPresent()){
-            return odontologo;
-        }
-        else{
-            throw new ResourceNotFoundException("No existe un odontologo con la matricula: " + odontologo.getMatricula());
+            Odontologo odontologoEntity = mapper.convertValue(odontologoDto, Odontologo.class);
+            odontologoModificar.map(odontologo -> {
+                odontologo.setNombre(odontologoEntity.getNombre());
+                odontologo.setApellido(odontologoEntity.getApellido());
+                return odontologoRepository.save(odontologo);
+            });
+            LOGGER.info("Modicando el odontologo con matricula " + odontologoDto.getMatricula());
+            return odontologoDto;
+        }else{
+            throw new ResourceNotFoundException("No existe un odontologo con la matricula: " + odontologoDto.getMatricula());
         }
     }
 

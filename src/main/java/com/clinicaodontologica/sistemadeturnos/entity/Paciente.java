@@ -12,7 +12,7 @@ import java.util.Set;
 public class Paciente {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
     @Column(length = 50, nullable = false)
@@ -30,7 +30,7 @@ public class Paciente {
     @Column(name = "fecha_de_ingreos", nullable = false)
     private LocalDate fechaDeIngreso;
 
-    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name = "domicilio_id", referencedColumnName = "id",nullable = false)
     private Domicilio domicilio;
 

@@ -32,7 +32,7 @@ public class OdontologoController {
         return new ResponseEntity(odontologoService.obtenerOdontologoPorId(id), HttpStatus.OK);
     }
 
-    @GetMapping("listar")
+    @GetMapping
     public Collection<OdontologoDto> listarOdontologo(){
         return odontologoService.listarOdontologo();
     }

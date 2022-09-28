@@ -1,6 +1,5 @@
 package com.clinicaodontologica.sistemadeturnos.dto;
 
-import com.clinicaodontologica.sistemadeturnos.entity.Domicilio;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 import lombok.NoArgsConstructor;

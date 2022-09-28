@@ -59,3 +59,44 @@ Method [public org.springframework.http.ResponseEntity<com.clinicaodontologica.s
 [2022-09-26 13:37:24] [ ERROR] [GlobalExceptionHandler:17] Ya existe un paciente con el dni 78108532
 [2022-09-26 13:37:51] [ INFO ] [OdontologoServiceImpl:33] Se guardo correctamente el odontologo con matricula 12345A
 [2022-09-26 13:54:20] [ ERROR] [GlobalExceptionHandler:17] Ya existe un paciente con el dni 78108532
+[2022-09-26 17:33:26] [ INFO ] [OdontologoServiceImpl:34] Se guardo correctamente el odontologo con matricula 12345A
+[2022-09-26 17:33:30] [ ERROR] [GlobalExceptionHandler:17] Ya existe un odontologo con la matricula 12345A
+[2022-09-26 17:34:01] [ ERROR] [GlobalExceptionHandler:17] Ya existe un paciente con el dni 78108532
+[2022-09-26 17:42:35] [ ERROR] [GlobalExceptionHandler:24] No existe un paciente con el id: 1
+[2022-09-26 17:42:52] [ ERROR] [GlobalExceptionHandler:24] No existe un paciente con el id: 2
+[2022-09-26 17:42:57] [ INFO ] [PacienteServiceImpl:45] Consultando el paciente con el id 1
+[2022-09-26 17:50:33] [ ERROR] [GlobalExceptionHandler:24] No existe un paciente con el id: 1
+[2022-09-26 17:50:39] [ INFO ] [PacienteServiceImpl:45] Consultando el paciente con el id 1
+[2022-09-26 19:42:05] [ ERROR] [GlobalExceptionHandler:24] No existe un paciente con el id: 2
+[2022-09-26 19:42:13] [ INFO ] [PacienteServiceImpl:45] Consultando el paciente con el id 1
+[2022-09-26 20:22:31] [ INFO ] [PacienteServiceImpl:44] Consultando el paciente con el id 1
+[2022-09-26 22:10:55] [ ERROR] [GlobalExceptionHandler:24] No existe un paciente con el id: 1
+[2022-09-26 22:16:48] [ INFO ] [PacienteServiceImpl:44] Consultando el paciente con el id 1
+[2022-09-26 22:16:54] [ INFO ] [PacienteServiceImpl:78] Eliminando el paciente con el id 1
+[2022-09-26 22:17:09] [ ERROR] [GlobalExceptionHandler:24] No existe un paciente con el id: 1
+[2022-09-27 23:23:09] [ ERROR] [GlobalExceptionHandler:24] No existe un paciente con el id: 1
+[2022-09-27 23:23:36] [ INFO ] [PacienteServiceImpl:44] Consultando el paciente con el id 1
+[2022-09-27 23:29:46] [ INFO ] [PacienteServiceImpl:58] Listando todos los paciente
+[2022-09-27 23:29:58] [ ERROR] [GlobalExceptionHandler:24] No existe un paciente con el id: 1
+[2022-09-27 23:30:03] [ ERROR] [GlobalExceptionHandler:24] No existe un paciente con dni 78108532
+[2022-09-27 23:31:09] [ INFO ] [PacienteServiceImpl:75] Modicando el paciente con el dni78108532
+[2022-09-27 23:32:24] [ INFO ] [OdontologoServiceImpl:35] Se guardo correctamente el odontologo con matricula 12345A
+[2022-09-27 23:32:28] [ ERROR] [GlobalExceptionHandler:24] No existe un odontologo con el id: 1
+[2022-09-27 23:32:51] [ ERROR] [GlobalExceptionHandler:17] Ya existe un odontologo con la matricula 12345A
+[2022-09-27 23:32:58] [ ERROR] [GlobalExceptionHandler:24] No existe un odontologo con el id: 1
+[2022-09-27 23:38:00] [ INFO ] [OdontologoServiceImpl:35] Se guardo correctamente el odontologo con matricula 12345A
+[2022-09-27 23:38:21] [ INFO ] [OdontologoServiceImpl:46] Consultando el odontologo con el id 1
+[2022-09-27 23:38:28] [ INFO ] [OdontologoServiceImpl:60] Listando todos los odontologos
+[2022-09-27 23:38:39] [ ERROR] [GlobalExceptionHandler:24] No existe un odontologo con la matricula: 12345A8
+[2022-09-27 23:38:56] [ INFO ] [OdontologoServiceImpl:74] Modicando el odontologo con matricula 12345A
+[2022-09-27 23:39:10] [ ERROR] [GlobalExceptionHandler:24] No existe un odontologo con el id: 2
+[2022-09-27 23:39:17] [ INFO ] [OdontologoServiceImpl:85] Eliminando el odontologo con el id 1
+[2022-09-27 23:39:32] [ INFO ] [PacienteServiceImpl:44] Consultando el paciente con el id 2
+[2022-09-27 23:42:52] [ INFO ] [OdontologoServiceImpl:35] Se guardo correctamente el odontologo con matricula 12345A
+[2022-09-27 23:44:21] [ INFO ] [OdontologoServiceImpl:74] Modicando el odontologo con matricula 12345A
+[2022-09-27 23:47:26] [ INFO ] [OdontologoServiceImpl:35] Se guardo correctamente el odontologo con matricula 12345A
+[2022-09-27 23:47:39] [ INFO ] [OdontologoServiceImpl:46] Consultando el odontologo con el id 1
+[2022-09-27 23:47:43] [ INFO ] [OdontologoServiceImpl:60] Listando todos los odontologos
+[2022-09-27 23:47:53] [ INFO ] [OdontologoServiceImpl:85] Eliminando el odontologo con el id 1
+[2022-09-27 23:48:08] [ INFO ] [OdontologoServiceImpl:35] Se guardo correctamente el odontologo con matricula 12345A
+[2022-09-27 23:48:47] [ ERROR] [GlobalExceptionHandler:17] Ya existe un odontologo con la matricula 12345A
