@@ -4,6 +4,7 @@ import com.clinicaodontologica.sistemadeturnos.dto.OdontologoDto;
 import com.clinicaodontologica.sistemadeturnos.exception.DuplicateResourceException;
 import com.clinicaodontologica.sistemadeturnos.exception.ResourceNotFoundException;
 import com.clinicaodontologica.sistemadeturnos.service.impl.OdontologoServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -17,6 +18,7 @@ public class OdontologoController {
 
     private final OdontologoServiceImpl odontologoService;
 
+    @Autowired
     public OdontologoController(OdontologoServiceImpl odontologoService) {
         this.odontologoService = odontologoService;
     }

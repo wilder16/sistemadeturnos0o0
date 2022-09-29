@@ -100,3 +100,51 @@ Method [public org.springframework.http.ResponseEntity<com.clinicaodontologica.s
 [2022-09-27 23:47:53] [ INFO ] [OdontologoServiceImpl:85] Eliminando el odontologo con el id 1
 [2022-09-27 23:48:08] [ INFO ] [OdontologoServiceImpl:35] Se guardo correctamente el odontologo con matricula 12345A
 [2022-09-27 23:48:47] [ ERROR] [GlobalExceptionHandler:17] Ya existe un odontologo con la matricula 12345A
+[2022-09-28 22:41:30] [ INFO ] [OdontologoServiceImpl:35] Se guardo correctamente el odontologo con matricula 12345A
+[2022-09-28 22:44:09] [ INFO ] [OdontologoServiceImpl:35] Se guardo correctamente el odontologo con matricula 12345A
+[2022-09-28 22:47:49] [ INFO ] [OdontologoServiceImpl:35] Se guardo correctamente el odontologo con matricula 12345A
+[2022-09-28 22:57:41] [ INFO ] [OdontologoServiceImpl:35] Se guardo correctamente el odontologo con matricula 12345A
+[2022-09-28 23:23:59] [ INFO ] [OdontologoServiceImpl:35] Se guardo correctamente el odontologo con matricula 12345A
+[2022-09-28 23:24:05] [ INFO ] [OdontologoServiceImpl:46] Consultando el odontologo con el id 1
+[2022-09-28 23:24:10] [ INFO ] [OdontologoServiceImpl:60] Listando todos los odontologos
+[2022-09-28 23:24:24] [ ERROR] [GlobalExceptionHandler:24] No existe un paciente con el id: 2
+[2022-09-28 23:24:30] [ INFO ] [PacienteServiceImpl:46] Consultando el paciente con el id 1
+[2022-09-28 23:24:36] [ INFO ] [PacienteServiceImpl:60] Listando todos los paciente
+[2022-09-28 23:36:43] [ INFO ] [OdontologoServiceImpl:35] Se guardo correctamente el odontologo con matricula 12345A
+[2022-09-28 23:39:22] [ ERROR] [GlobalExceptionHandler:24] No existe un paciente o un odontologo con ese id ingresado
+[2022-09-28 23:39:44] [ INFO ] [OdontologoServiceImpl:35] Se guardo correctamente el odontologo con matricula 12345A
+[2022-09-28 23:44:38] [ ERROR] [GlobalExceptionHandler:24] No existe un paciente o un odontologo con ese id ingresado
+[2022-09-28 23:44:44] [ INFO ] [OdontologoServiceImpl:35] Se guardo correctamente el odontologo con matricula 12345A
+[2022-09-28 23:44:47] [ ERROR] [GlobalExceptionHandler:24] No existe un paciente o un odontologo con ese id ingresado
+[2022-09-28 23:46:41] [ ERROR] [GlobalExceptionHandler:24] No existe un paciente o un odontologo con ese id ingresado
+[2022-09-28 23:46:56] [ INFO ] [OdontologoServiceImpl:35] Se guardo correctamente el odontologo con matricula 12345A
+[2022-09-29 00:03:58] [ ERROR] [GlobalExceptionHandler:24] No existe un paciente o un odontologo con ese id ingresado
+[2022-09-29 00:04:02] [ INFO ] [OdontologoServiceImpl:35] Se guardo correctamente el odontologo con matricula 12345A
+[2022-09-29 00:11:03] [ ERROR] [GlobalExceptionHandler:24] No existe un paciente o un odontologo con ese id ingresado
+[2022-09-29 00:11:11] [ INFO ] [OdontologoServiceImpl:35] Se guardo correctamente el odontologo con matricula 12345A
+[2022-09-29 00:15:57] [ ERROR] [GlobalExceptionHandler:24] No existe un paciente o un odontologo con ese id ingresado
+[2022-09-29 00:16:08] [ INFO ] [OdontologoServiceImpl:35] Se guardo correctamente el odontologo con matricula 12345A
+[2022-09-29 00:16:16] [ ERROR] [GlobalExceptionHandler:24] No existe un paciente o un odontologo con ese id ingresado
+[2022-09-29 00:19:07] [ INFO ] [OdontologoServiceImpl:35] Se guardo correctamente el odontologo con matricula 12345A
+[2022-09-29 00:19:55] [ INFO ] [OdontologoServiceImpl:35] Se guardo correctamente el odontologo con matricula 12345A
+[2022-09-29 00:20:08] [ ERROR] [GlobalExceptionHandler:24] No existe un paciente o un odontologo con ese id ingresado
+[2022-09-29 00:24:06] [ ERROR] [GlobalExceptionHandler:24] No existe un paciente o un odontologo con ese id ingresado
+[2022-09-29 00:24:11] [ INFO ] [OdontologoServiceImpl:35] Se guardo correctamente el odontologo con matricula 12345A
+[2022-09-29 00:32:08] [ ERROR] [GlobalExceptionHandler:24] No existe un paciente o un odontologo con ese id ingresado
+[2022-09-29 00:32:25] [ INFO ] [OdontologoServiceImpl:35] Se guardo correctamente el odontologo con matricula 12345A
+[2022-09-29 00:37:06] [ ERROR] [GlobalExceptionHandler:24] No existe un paciente o un odontologo con ese id ingresado
+[2022-09-29 00:37:10] [ INFO ] [OdontologoServiceImpl:35] Se guardo correctamente el odontologo con matricula 12345A
+[2022-09-29 00:37:14] [ ERROR] [GlobalExceptionHandler:24] No existe un paciente o un odontologo con ese id ingresado
+[2022-09-29 00:38:43] [ INFO ] [OdontologoServiceImpl:35] Se guardo correctamente el odontologo con matricula 12345A
+[2022-09-29 00:38:48] [ ERROR] [GlobalExceptionHandler:24] No existe un paciente o un odontologo con ese id ingresado
+[2022-09-29 00:41:01] [ ERROR] [GlobalExceptionHandler:24] No existe un paciente o un odontologo con ese id ingresado
+[2022-09-29 00:41:06] [ INFO ] [OdontologoServiceImpl:35] Se guardo correctamente el odontologo con matricula 12345A
+[2022-09-29 00:41:20] [ ERROR] [GlobalExceptionHandler:31] No se puede asignar un turno en una fecha en el pasodo
+[2022-09-29 00:51:43] [ ERROR] [GlobalExceptionHandler:24] No existe un paciente o un odontologo con ese id ingresado
+[2022-09-29 00:51:46] [ INFO ] [OdontologoServiceImpl:35] Se guardo correctamente el odontologo con matricula 12345A
+[2022-09-29 00:51:54] [ ERROR] [GlobalExceptionHandler:31] No se puede asignar un turno en una fecha en el pasodo
+[2022-09-29 00:52:23] [ ERROR] [GlobalExceptionHandler:24] No existe un turno con el id: 2
+[2022-09-29 00:52:33] [ INFO ] [TurnoServiceImpl:63] Consultando el turno con el id 1
+[2022-09-29 00:55:31] [ INFO ] [OdontologoServiceImpl:35] Se guardo correctamente el odontologo con matricula 12345A
+[2022-09-29 00:55:44] [ ERROR] [GlobalExceptionHandler:24] No existe un turno con el id: 1
+[2022-09-29 00:56:14] [ INFO ] [TurnoServiceImpl:63] Consultando el turno con el id 1

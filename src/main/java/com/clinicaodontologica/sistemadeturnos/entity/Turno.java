@@ -9,14 +9,14 @@ import java.time.LocalDate;
 @Data
 public class Turno {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name ="odontologo_id", referencedColumnName = "id", nullable = false)
     private Odontologo odontologo;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name ="paciente_id", referencedColumnName = "id", nullable = false)
     private Paciente paciente;
 

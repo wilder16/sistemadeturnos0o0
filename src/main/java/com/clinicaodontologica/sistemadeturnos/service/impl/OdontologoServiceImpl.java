@@ -6,9 +6,9 @@ import com.clinicaodontologica.sistemadeturnos.exception.DuplicateResourceExcept
 import com.clinicaodontologica.sistemadeturnos.exception.ResourceNotFoundException;
 import com.clinicaodontologica.sistemadeturnos.repository.IOdontologoRepository;
 import com.clinicaodontologica.sistemadeturnos.service.IOdontologoService;
-import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
@@ -20,7 +20,7 @@ public class OdontologoServiceImpl implements IOdontologoService {
     private final ObjectMapper mapper;
     private final static Logger LOGGER = Logger.getLogger(OdontologoServiceImpl.class);
 
-
+    @Autowired
     public OdontologoServiceImpl(IOdontologoRepository odontologoRepository, ObjectMapper mapper) {
         this.odontologoRepository = odontologoRepository;
         this.mapper = mapper;

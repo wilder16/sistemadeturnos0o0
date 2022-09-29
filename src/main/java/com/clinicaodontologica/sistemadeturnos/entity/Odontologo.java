@@ -2,6 +2,7 @@ package com.clinicaodontologica.sistemadeturnos.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.Set;
@@ -9,6 +10,7 @@ import java.util.Set;
 
 @Entity
 @Data
+@NoArgsConstructor
 public class Odontologo {
 
     @Id
@@ -24,7 +26,7 @@ public class Odontologo {
     @Column(unique = true, nullable = false)
     private String matricula;
 
-    @OneToMany(mappedBy = "odontologo", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "odontologo", cascade = CascadeType.MERGE)
     @JsonIgnore
     private Set<Turno> turnos;
 

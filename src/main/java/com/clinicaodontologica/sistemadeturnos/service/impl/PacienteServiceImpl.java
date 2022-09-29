@@ -8,6 +8,7 @@ import com.clinicaodontologica.sistemadeturnos.repository.IPacienteRepository;
 import com.clinicaodontologica.sistemadeturnos.service.IPacienteService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
@@ -19,6 +20,7 @@ public class PacienteServiceImpl implements IPacienteService {
     private final ObjectMapper mapper;
     private final static Logger LOGGER = Logger.getLogger(PacienteServiceImpl.class);
 
+    @Autowired
     public PacienteServiceImpl(IPacienteRepository pacienteRepository, ObjectMapper mapper) {
         this.pacienteRepository = pacienteRepository;
         this.mapper = mapper;

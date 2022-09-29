@@ -25,4 +25,11 @@ public class GlobalExceptionHandler extends Throwable {
         return new ResponseEntity("ExceptionHandler Error " + ex.getMessage(), HttpStatus.NOT_FOUND);
     }
 
+    @ExceptionHandler(PastDateException.class)
+    public ResponseEntity<?> fechaPasada(PastDateException ex)
+    {
+        LOGGER.error(ex.getMessage());
+        return new ResponseEntity("ExceptionHandler Error " + ex.getMessage(), HttpStatus.BAD_REQUEST);
+    }
+
 }
