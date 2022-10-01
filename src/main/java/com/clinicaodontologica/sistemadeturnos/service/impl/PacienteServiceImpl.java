@@ -74,7 +74,7 @@ public class PacienteServiceImpl implements IPacienteService {
                 paciente.setDomicilio(pacienteEntity.getDomicilio());
                 return pacienteRepository.save(paciente);
             });
-            LOGGER.info("Modicando el paciente con el dni" + pacienteDto.getDni());
+            LOGGER.info("Modificando el paciente con el dni" + pacienteDto.getDni());
             return pacienteDto;
         }else {
             throw new ResourceNotFoundException("No existe un paciente con dni " + pacienteDto.getDni());

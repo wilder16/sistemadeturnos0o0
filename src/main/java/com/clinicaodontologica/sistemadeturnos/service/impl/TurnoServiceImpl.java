@@ -18,8 +18,7 @@ import org.springframework.stereotype.Service;
 
 import java.time.DateTimeException;
 import java.time.LocalDate;
-import java.util.Collection;
-import java.util.Optional;
+import java.util.*;
 
 @Service
 public class TurnoServiceImpl implements ITurnoService {
@@ -49,7 +48,7 @@ public class TurnoServiceImpl implements ITurnoService {
                 return mapper.convertValue(turnoEntity, TurnoDto.class);
 
             }else{
-                throw new PastDateException("No se puede asignar un turno en una fecha en el pasodo");
+                throw new PastDateException("No se puede asignar un turno en una fecha en el pasado");
             }
         }else {
             throw new ResourceNotFoundException("No existe un paciente o un odontologo con ese id ingresado");
@@ -69,16 +68,54 @@ public class TurnoServiceImpl implements ITurnoService {
 
     @Override
     public Collection<TurnoDto> listarTurno() {
-        return null;
+        List<Turno> turnosEntity  = turnoRepository.findAll();
+        Set<TurnoDto> turnosDto = new HashSet<>();
+        for (Turno turno: turnosEntity) {
+            turnosDto.add(mapper.convertValue(turno, TurnoDto.class));
+        }
+        LOGGER.info("Listando todos los trunos");
+        return turnosDto;
     }
 
     @Override
-    public TurnoDto modificarTurno(TurnoDto turno) {
-        return null;
+    public TurnoDto modificarTurno(TurnoDto turnoDto, Long id) throws ResourceNotFoundException, PastDateException {
+        Optional<Turno> turnoModificar = turnoRepository.findById(id);
+        if (turnoModificar.isPresent()) {
+            Turno turnoEntity = mapper.convertValue(turnoDto, Turno.class);
+            Optional<Paciente> pacienteEntity = pacienteRepository.findById(turnoEntity.getPaciente().getId());
+            Optional<Odontologo> odontologoEntity = odontologoRepository.findById(turnoEntity.getOdontologo().getId());
+            if(pacienteEntity.isPresent()  && odontologoEntity.isPresent()){
+                if(!turnoEntity.getFechaDeTurno().isBefore(LocalDate.now())){
+                    turnoModificar.map( turno -> {
+                        turno.setOdontologo(turnoEntity.getOdontologo());
+                        turno.setPaciente(turnoEntity.getPaciente());
+                        turno.setFechaDeTurno(turnoEntity.getFechaDeTurno());
+                        return turnoRepository.save(turno);
+                    });
+                    LOGGER.info("Modificando el turno con el id " + id);
+                    return mapper.convertValue(turnoEntity, TurnoDto.class);
+
+                }else{
+                    throw new PastDateException("No se puede modificar un turno en una fecha en el pasado");
+                }
+            }else {
+                throw new ResourceNotFoundException("No existe un paciente o un odontologo con ese id ingresado");
+            }
+        }else{
+            throw new ResourceNotFoundException("No existe un turno con id " + id);
+        }
     }
 
     @Override
-    public TurnoDto elimiarTurnoPorId(Long id) {
-        return null;
+    public TurnoDto elimiarTurnoPorId(Long id) throws ResourceNotFoundException {
+        Optional<Turno> turnoEntity = turnoRepository.findById(id);
+        if(turnoEntity.isPresent()){
+            LOGGER.info("Eliminando el turno con el id " + id);
+            turnoRepository.deleteById(id);
+            return mapper.convertValue(turnoEntity, TurnoDto.class);
+        }else{
+            throw new ResourceNotFoundException("No existe un turno con el id: " + id);
+        }
+
     }
 }

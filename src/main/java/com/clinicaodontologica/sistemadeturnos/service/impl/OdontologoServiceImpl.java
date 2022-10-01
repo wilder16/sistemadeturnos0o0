@@ -71,7 +71,7 @@ public class OdontologoServiceImpl implements IOdontologoService {
                 odontologo.setApellido(odontologoEntity.getApellido());
                 return odontologoRepository.save(odontologo);
             });
-            LOGGER.info("Modicando el odontologo con matricula " + odontologoDto.getMatricula());
+            LOGGER.info("Modificando el odontologo con matricula " + odontologoDto.getMatricula());
             return odontologoDto;
         }else{
             throw new ResourceNotFoundException("No existe un odontologo con la matricula: " + odontologoDto.getMatricula());

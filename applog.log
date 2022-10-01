@@ -148,3 +148,56 @@ Method [public org.springframework.http.ResponseEntity<com.clinicaodontologica.s
 [2022-09-29 00:55:31] [ INFO ] [OdontologoServiceImpl:35] Se guardo correctamente el odontologo con matricula 12345A
 [2022-09-29 00:55:44] [ ERROR] [GlobalExceptionHandler:24] No existe un turno con el id: 1
 [2022-09-29 00:56:14] [ INFO ] [TurnoServiceImpl:63] Consultando el turno con el id 1
+[2022-09-30 19:58:10] [ INFO ] [TurnoServiceImpl:76] Listando todos los trunos
+[2022-09-30 19:59:43] [ ERROR] [GlobalExceptionHandler:24] No existe un turno con el id: 1
+[2022-09-30 19:59:53] [ INFO ] [TurnoServiceImpl:76] Listando todos los trunos
+[2022-09-30 20:01:20] [ ERROR] [GlobalExceptionHandler:24] No existe un paciente con dni 1
+[2022-09-30 20:08:10] [ ERROR] [GlobalExceptionHandler:24] No existe un turno con id 1
+[2022-09-30 20:08:28] [ INFO ] [OdontologoServiceImpl:35] Se guardo correctamente el odontologo con matricula 12345A
+[2022-09-30 20:08:56] [ ERROR] [GlobalExceptionHandler:24] No existe un paciente o un odontologo con ese id ingresado
+[2022-09-30 20:09:36] [ ERROR] [GlobalExceptionHandler:31] No se puede asignar un turno en una fecha en el pasodo
+[2022-09-30 20:10:33] [ INFO ] [TurnoServiceImpl:76] Listando todos los trunos
+[2022-09-30 20:12:04] [ ERROR] [GlobalExceptionHandler:31] No se puede asignar un turno en una fecha en el pasodo
+[2022-09-30 20:16:57] [ ERROR] [GlobalExceptionHandler:24] No existe un paciente o un odontologo con ese id ingresado
+[2022-09-30 20:19:44] [ ERROR] [GlobalExceptionHandler:24] No existe un paciente o un odontologo con ese id ingresado
+[2022-09-30 20:19:52] [ INFO ] [TurnoServiceImpl:95] Modificando el turno con el id 1
+[2022-09-30 20:20:04] [ INFO ] [TurnoServiceImpl:62] Consultando el turno con el id 1
+[2022-09-30 23:06:06] [ ERROR] [GlobalExceptionHandler:24] No existe un turno con el id: 1
+[2022-09-30 23:06:19] [ INFO ] [OdontologoServiceImpl:35] Se guardo correctamente el odontologo con matricula 12345A
+[2022-09-30 23:06:33] [ ERROR] [GlobalExceptionHandler:24] No existe un turno con el id: 1
+[2022-09-30 23:06:56] [ ERROR] [GlobalExceptionHandler:24] No existe un turno con el id: 1
+[2022-09-30 23:07:00] [ INFO ] [TurnoServiceImpl:76] Listando todos los trunos
+[2022-09-30 23:07:09] [ INFO ] [TurnoServiceImpl:62] Consultando el turno con el id 1
+[2022-09-30 23:07:15] [ INFO ] [TurnoServiceImpl:76] Listando todos los trunos
+[2022-09-30 23:07:21] [ INFO ] [TurnoServiceImpl:95] Modificando el turno con el id 1
+[2022-09-30 23:07:43] [ INFO ] [TurnoServiceImpl:113] Eliminando el turno con el id 1
+[2022-09-30 23:07:55] [ INFO ] [OdontologoServiceImpl:46] Consultando el odontologo con el id 1
+[2022-09-30 23:08:03] [ INFO ] [PacienteServiceImpl:46] Consultando el paciente con el id 1
+[2022-09-30 23:36:45] [ INFO ] [OdontologoServiceImpl:35] Se guardo correctamente el odontologo con matricula 159753A
+[2022-09-30 23:38:11] [ INFO ] [OdontologoServiceImpl:35] Se guardo correctamente el odontologo con matricula 159753A
+[2022-09-30 23:53:20] [ INFO ] [OdontologoServiceImpl:35] Se guardo correctamente el odontologo con matricula 159753A
+[2022-09-30 23:53:20] [ INFO ] [OdontologoServiceImpl:46] Consultando el odontologo con el id 1
+[2022-09-30 23:54:54] [ INFO ] [OdontologoServiceImpl:35] Se guardo correctamente el odontologo con matricula 159753A
+[2022-09-30 23:54:55] [ INFO ] [OdontologoServiceImpl:46] Consultando el odontologo con el id 1
+[2022-10-01 00:03:21] [ INFO ] [OdontologoServiceImpl:35] Se guardo correctamente el odontologo con matricula 159753A
+[2022-10-01 00:03:21] [ INFO ] [OdontologoServiceImpl:60] Listando todos los odontologos
+[2022-10-01 00:03:21] [ INFO ] [OdontologoServiceImpl:46] Consultando el odontologo con el id 1
+[2022-10-01 00:10:01] [ INFO ] [OdontologoServiceImpl:35] Se guardo correctamente el odontologo con matricula 159753A
+[2022-10-01 00:10:02] [ INFO ] [OdontologoServiceImpl:46] Consultando el odontologo con el id 1
+[2022-10-01 00:10:02] [ INFO ] [OdontologoServiceImpl:60] Listando todos los odontologos
+[2022-10-01 00:10:02] [ INFO ] [OdontologoServiceImpl:74] Modificando el odontologo con matricula 159753A
+[2022-10-01 00:16:17] [ INFO ] [OdontologoServiceImpl:35] Se guardo correctamente el odontologo con matricula 159753A
+[2022-10-01 00:16:17] [ INFO ] [OdontologoServiceImpl:46] Consultando el odontologo con el id 1
+[2022-10-01 00:16:17] [ INFO ] [OdontologoServiceImpl:60] Listando todos los odontologos
+[2022-10-01 00:16:18] [ INFO ] [OdontologoServiceImpl:74] Modificando el odontologo con matricula 159753A
+[2022-10-01 00:16:18] [ INFO ] [OdontologoServiceImpl:85] Eliminando el odontologo con el id 1
+[2022-10-01 00:21:12] [ INFO ] [OdontologoServiceImpl:35] Se guardo correctamente el odontologo con matricula 159753A
+[2022-10-01 00:21:12] [ INFO ] [OdontologoServiceImpl:46] Consultando el odontologo con el id 1
+[2022-10-01 00:21:12] [ INFO ] [OdontologoServiceImpl:60] Listando todos los odontologos
+[2022-10-01 00:21:12] [ INFO ] [OdontologoServiceImpl:74] Modificando el odontologo con matricula 159753A
+[2022-10-01 00:21:12] [ INFO ] [OdontologoServiceImpl:85] Eliminando el odontologo con el id 1
+[2022-10-01 00:21:59] [ INFO ] [OdontologoServiceImpl:35] Se guardo correctamente el odontologo con matricula 159753A
+[2022-10-01 00:21:59] [ INFO ] [OdontologoServiceImpl:46] Consultando el odontologo con el id 1
+[2022-10-01 00:22:00] [ INFO ] [OdontologoServiceImpl:60] Listando todos los odontologos
+[2022-10-01 00:22:00] [ INFO ] [OdontologoServiceImpl:74] Modificando el odontologo con matricula 159753A
+[2022-10-01 00:22:00] [ INFO ] [OdontologoServiceImpl:85] Eliminando el odontologo con el id 1
